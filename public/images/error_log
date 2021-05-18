@@ -1,0 +1,21 @@
+[07-Aug-2019 07:21:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function split() in /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code:100
+Stack trace:
+#0 /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1): eval()
+#1 /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1): eval()
+#2 /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1): eval()
+#3 /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1): eval()
+#4 /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) :  in /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code on line 100
+[07-Aug-2019 07:21:36 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function split() in /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code:100
+Stack trace:
+#0 /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1): eval()
+#1 /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1): eval()
+#2 /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1): eval()
+#3 /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1): eval()
+#4 /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) :  in /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code on line 100
+[07-Aug-2019 07:22:43 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function split() in /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code:100
+Stack trace:
+#0 /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1): eval()
+#1 /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1): eval()
+#2 /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1): eval()
+#3 /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1): eval()
+#4 /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) :  in /home/vidonair/public_html/images/vidona-mini.php(8) : eval()'d code(2) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code(1) : eval()'d code on line 100
