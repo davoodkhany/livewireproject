@@ -37,6 +37,14 @@ Route::prefix('/admin/dashboard')->middleware(['auth:web','verified'])->group(fu
     Route::get('/user/all', \App\Http\Livewire\Admin\Users\Allusers::class)->name('admin.alluser');
     Route::get('/user/edit/{user}', \App\Http\Livewire\Admin\Users\EditUser::class)->name('admin.edituser');
 
+    //!! Article Create, Store, Edit, Update, Delete Resource Controller
+    Route::resource('blogs', \App\Http\Controllers\Admin\ArticleController::class);
+
+     //!! Ckeditor Upload image
+
+    Route::post('/ckeditor/upload', [\App\Http\Controllers\CKEditorController::class, 'upload'])->name('ckeditor.image-upload');
+
+
 });
 
 

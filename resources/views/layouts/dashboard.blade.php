@@ -24,7 +24,7 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="/css/app-light.css" id="lightTheme">
     <link rel="stylesheet" href="/css/app-dark.css" id="darkTheme" disabled>
-
+    @yield('style')
     @livewireStyles
   </head>
   <body class="vertical light rtl ">
@@ -37,10 +37,13 @@
             <main role="main" class="main-content">
 
                 {{ $slot ?? "" }}
+                 @yield('content')
 
             </main> <!-- main -->
 
 
+
+@yield('script')
 <livewire:admin.layouts.footer />
 
 
