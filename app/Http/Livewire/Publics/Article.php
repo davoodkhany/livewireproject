@@ -12,6 +12,7 @@ use Livewire\WithPagination;
 
 class Article extends Component
 {
+
     use WithPagination;
 
     public $search;
@@ -38,7 +39,6 @@ class Article extends Component
     }
     public function render()
     {
-
         $articles=ModelsArticle::where('title' , 'LIKE' , "%{$this->search}%")->latest()->paginate(6);
 
         return view('livewire.publics.article',compact('articles'));

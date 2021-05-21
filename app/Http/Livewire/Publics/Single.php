@@ -11,6 +11,9 @@ use Artesaos\SEOTools\Facades\SEOMeta;
 
 class Single extends Component
 {
+
+
+
     public Article $article;
 
 
@@ -31,7 +34,7 @@ class Single extends Component
         JsonLd::setTitle($this->article->seo_title);
         JsonLd::setDescription($this->article->seo_discription);
         JsonLd::setType('Article');
-        JsonLd::addImage($article->image);
+        JsonLd::addImage($this->article->image);
 
     }
     public function render()

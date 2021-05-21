@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Menu;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -25,6 +26,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
+        Paginator::useBootstrap();
         $menus=Menu::where('status','1')->orderBy('sort','Asc')->get();
         $submenus=Menu::where('status','1')->where('parent','!=','0')->orderBy('sort','Asc')->get();
         View::share('menus', $menus);

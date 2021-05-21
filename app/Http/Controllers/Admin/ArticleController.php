@@ -6,9 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Livewire\WithPagination;
 
 class ArticleController extends AdminController
 {
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -16,6 +20,7 @@ class ArticleController extends AdminController
      */
     public function index()
     {
+
         $articles = Article::paginate(20);
         return view('admin.articles.index', compact('articles'))->layout('layouts.app');
     }
@@ -38,6 +43,7 @@ class ArticleController extends AdminController
      */
     public function store(Request $request)
     {
+
       $request->validate([
         'title' => 'required',
         'discription' => 'required',
@@ -70,7 +76,7 @@ class ArticleController extends AdminController
         ]);
 
 
-        return redirect(route('blogs.index'));
+        return redirect(route('articles.index'));
 
     }
 
@@ -94,8 +100,9 @@ class ArticleController extends AdminController
     public function edit($article)
     {
 
-        $article = Article::where('id', $article)->first();
+        $article = Article::where('slug', $article)->first();
         return view('admin.articles.edit', compact('article'));
+
     }
 
     /**
@@ -107,7 +114,7 @@ class ArticleController extends AdminController
      */
     public function update(Request $request, $articles)
     {
-        $article = Article::where('id', $articles)->first();
+        $article = Article::where('slug', $articles)->first();
         $request->validate([
             'body'=>'required',
             'discription'=>'required',
@@ -115,7 +122,7 @@ class ArticleController extends AdminController
             //  'image'=>'required',
 
          ]);
-         $oldimage=$article->image;
+         $oldimage = $article->image;
 
          if (!$request->image) {
 
@@ -135,7 +142,7 @@ class ArticleController extends AdminController
             $article->image=$oldimage;
             $article->save();
 
-            return redirect(route('blogs.index'));
+            return redirect(route('articles.index'));
         }else {
             $article->user_id = auth()->user()->id;
             $article->title  = $request->title;
@@ -156,7 +163,7 @@ class ArticleController extends AdminController
             $article->image=$imagepath;
             $article->save();
 
-            return redirect(route('blogs.index'));
+            return redirect(route('articles.index'));
         }
     }
 
@@ -173,7 +180,7 @@ class ArticleController extends AdminController
 
         $article->delete();
 
-        return redirect(route('blogs.index'));
+        return redirect(route('articles.index'));
 
     }
 }

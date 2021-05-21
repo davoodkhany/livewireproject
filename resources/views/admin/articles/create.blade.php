@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-<form method="post" action="{{ route('blogs.store') }}" enctype="multipart/form-data">
+<form method="post" action="{{ route('articles.store') }}" enctype="multipart/form-data">
     @csrf
     @method('post')
         <div class="col-12">

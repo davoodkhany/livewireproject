@@ -10,7 +10,8 @@
             </div>
         </div>
     </div>
-<form method="post" action="{{ route('blogs.update', $article ) }}" enctype="multipart/form-data">
+
+<form method="post" action="{{ route('articles.update', ['article' => $article->slug] ) }}" enctype="multipart/form-data">
     {{csrf_field()}}
     {{method_field('PATCH')}}
         <div class="col-12">
@@ -39,8 +40,8 @@
             </div>
             <div class="mt-3 row">
                 <div class="col">
-                    <textarea  class="form-control" name='description' placeholder="Description"  style="width: -webkit-fill-available;" required value="">{{ $article->description }}</textarea>
-                    @error('description') <span class="error">{{ $message }}</span> @enderror
+                    <textarea  class="form-control" name='discription' placeholder="Description"  style="width: -webkit-fill-available;" required value="">{{ $article->discription }}</textarea>
+                    @error('discription') <span class="error">{{ $message }}</span> @enderror
                 </div>
             </div>
             <div class="mt-3">

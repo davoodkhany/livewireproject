@@ -36,7 +36,7 @@ class Allusers extends Component
         $data = $this->validate();
         $data['password_nohash'] = $this->password;
         $data['password']= Hash::make($this->password);
-        $user=User::create($data);
+        $user = User::create($data);
 
         if($this->email_verified_at)
         {
@@ -61,7 +61,7 @@ class Allusers extends Component
         return Excel::download(new UsersExport,'users.xlsx');
     }
 
-    
+
     public function render()
     {
         $this->users=User::where('name','like',"%$this->search%")->get();

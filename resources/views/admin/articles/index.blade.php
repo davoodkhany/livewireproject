@@ -14,7 +14,7 @@
             <div class="col-auto ms-auto d-print-none">
                 <div class="d-flex">
 
-                    <a href="{{route('blogs.create')}}" class="btn btn-primary">
+                    <a href="{{route('articles.create')}}" class="btn btn-primary">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                         Create Article
                     </a>
@@ -25,7 +25,7 @@
         <!-- Page title -->
         <div>
 
-            <div class="row row-cards">
+            <div class="row row-cards justify-content-center">
 
             <div class="col-12">
                 <div class="card">
@@ -64,16 +64,16 @@
                                 @endif
                             </td>
                             <td>
-                                <div class="btn-list flex-nowrap">
+                                <div class="btn-list d-flex justify-spaceevenely">
 
-                                <a href="{{ route('blogs.edit', $article) }}" class="btn btn-outline-primary">
+                                <a href="{{ route('articles.edit', ['article' => $article->slug]) }}" class="mr-2 btn btn-outline-primary">
                                     Edit
                                 </a>
 
-                                <form action="{{ route('blogs.destroy',  $article->slug ) }}" method="POST">
+                                <form action="{{ route('articles.destroy',  $article->slug ) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" href="{{ route('blogs.destroy', $article->slug ) }}" class="btn btn-outline-danger">
+                                    <button type="submit" href="{{ route('articles.destroy', $article->slug ) }}" class="btn btn-outline-danger">
                                         Delete
                                     </button>
                                 </form>
@@ -88,8 +88,10 @@
                 </div>
                 </div>
 
-            <div class="mt-4 d-flex">
-                {{ $articles->links() }}
-            </div>
+                <div class="mt-4 justify-items-center d-flex">
+                    {{ $articles->links() }}
+                </div>
+
         </div>
+
     @endsection
