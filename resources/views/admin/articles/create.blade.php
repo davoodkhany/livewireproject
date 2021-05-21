@@ -114,7 +114,6 @@
     // CKEDITOR.replace( 'body' );
     config.fullPage = true;
     extraPlugins: 'imageuploader';
-    contentsLangDirection: 'rtl'
 
 </script>
 
